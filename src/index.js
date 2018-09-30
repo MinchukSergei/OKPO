@@ -1,46 +1,22 @@
-import Chart from 'chart.js';
+import Plotly from 'plotly.js-dist';
 
-let chartCtx = $('#chart');
+let trace1 = {
+    x: [1, 2, 3, 4],
+    y: [10, 15, 13, 17],
+    type: 'scatter'
+};
 
-chartCtx.width(window.innerWidth);
-chartCtx.height(window.innerHeight);
-// debugger;
+let trace2 = {
+    x: [1, 2, 3, 4],
+    y: [16, 5, 11, 9],
+    type: 'scatter'
+};
 
-let chart = new Chart(chartCtx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-})
+var layout = {
+    title: "Responsive to window's size!",
+    font: {size: 18}
+  };
 
-// let chart = new Chart(ctx)
+let data = [trace1, trace2];
+
+Plotly.newPlot('root', data, layout, {responsive: true});
