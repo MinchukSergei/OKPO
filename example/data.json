@@ -1,0 +1,17 @@
+{
+    "title": "Chart example",
+    "xAxis": "X-axis",
+    "yAxis": "Y-axis",
+    "type": "markers",
+    "fontSize": 18,
+    "legend": true,
+    "data": [{
+        "x": [0, 1, 2, 3],
+        "y": [0, 1, 2, 3],
+        "name": "legend1"
+    }, {
+        "x": [4, 5, 6, 7],
+        "y": [8, 9, 10, 11],
+        "name": "legend2"
+    }]
+}
