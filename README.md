@@ -2,7 +2,10 @@
 OKPO lab Chart
 
 Usage:
+```
 npm start
+```
+
 choose *.json file the following format:
 
 ```
