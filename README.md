@@ -5,6 +5,7 @@ Usage:
 npm start
 choose *.json file the following format:
 
+```
 {
     "title": "Chart example", // Tilte of the chart. Optional
     "xAxis": "X-axis",        // Tilte of the x-asix. Optional
@@ -24,3 +25,4 @@ choose *.json file the following format:
 }                             // 'markers','scatter', 'bar' types: x and y arrays are required (x/y-axis coordinates)
                               // 'histogram': x array is required (values for aggregation)
                               // Program displays only last trace. x and y arrays are required (x - values, y - labels)
+```
